@@ -1,5 +1,6 @@
 nginx:
   name: nginx-database
+  namespace: nginx-class1
   labels:
     id: C0908671
     app: nginx

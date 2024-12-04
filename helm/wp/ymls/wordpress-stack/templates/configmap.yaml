@@ -1,0 +1,15 @@
+---
+# Source: wordpress-stack/templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wp-wordpress-configmap
+  labels:
+    app: wp-app
+    env: dev
+    id: C0908671
+data:
+  APP_ENV: "dev"
+  WORDPRESS_DB_HOST: "wp-database-service.db.svc.cluster.local"
+  WORDPRESS_DB_NAME: "wordpress"
+  WORDPRESS_DB_USER: "wordpress"

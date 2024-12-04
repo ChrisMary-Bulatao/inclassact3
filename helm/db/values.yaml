@@ -1,17 +1,14 @@
-#default
-#common stuff is put here
-
 db:
   name: wp-database
+  namespace: wpdb
   labels:
-    id: C0908671
     app: db
     env: dev
-    stack: wordpress
+    id: C0908671
   image:
-    repository: mariadb:10.6.4-focal
-    tag: v1
-    pullPolicy: Always
+    repository: mariadb
+    tag: "10.6.4-focal"
+    pullPolicy: IfNotPresent
   replicas: 1
   configmap:
     ## KEY: "value"

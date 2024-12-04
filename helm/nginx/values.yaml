@@ -1,0 +1,15 @@
+nginx:
+  name: nginx-database
+  labels:
+    id: C0908671
+    app: nginx
+    env: dev
+  image:
+    repository: gcr.io/ica-1-436122/nginx-class
+    tag: v1
+    pullPolicy: IfNotPresent
+  replicas: 1
+  service:
+    type: LoadBalancer
+    port: 8080
+    targetPort: 80

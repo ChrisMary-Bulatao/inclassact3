@@ -1,0 +1,20 @@
+---
+# Source: wordpress-stack/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: wp-wordpress-service
+  labels:
+    app: wp-app
+    env: dev
+    id: C0908671
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  type: ClusterIP
+  selector:
+    app: wp-app
+    env: dev
+    id: C0908671
